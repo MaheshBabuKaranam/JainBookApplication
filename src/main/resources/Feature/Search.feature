@@ -10,8 +10,12 @@ Scenario: Publisher Search
 When click on advanced search and give publisher as 'Paper Back' and click on search
 Then Assert the element by title for Publisher Serach
 
+#Scenario: ISBN Search
+#When click on advanced search and give isbn as '9789389921113' and click on search
+#Then Take screenshot of the particular book
+
 Scenario: ISBN Search
-When click on advanced search and give isbn as '9789389921113' and click on search
+When click on advanced search and give isbn as from Excel "src/test/resources/Excel/jainbookexcel.xlsx" with SheetName "ISDN SEARCH" and click on search 
 Then Take screenshot of the particular book
 
 Scenario: JBA Search
